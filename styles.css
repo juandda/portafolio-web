@@ -1,0 +1,107 @@
+:root{
+    --beige: #FAF1E6;
+    --soft-beige:#FDFAF6;
+    --soft-green:#E4EFE7;
+    --green:#064420;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+    font-family: "Quicksand", sans-serif;
+    overflow-x: hidden;
+}
+header{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('https://cdn.pixabay.com/photo/2020/06/29/14/15/lightbulb-5352822_960_720.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+nav{
+    display: flex;
+    width: 100%;
+    height: 8vh;
+    align-items: center;
+    position: fixed;
+    background-color: black;
+}
+.nav-links{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    list-style: none;
+}
+.nav-links a{
+    text-decoration: none;
+    color: var(--soft-beige);
+    font-weight: bolder;
+}
+.welcome-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.welcome-container h1{
+    font-family: 'Exo', sans-serif;
+    font-size: 3rem;
+    color: var(--soft-beige);
+    margin-top: 250px;
+}
+.welcome-container h2{
+    font-family: 'Exo', sans-serif;
+    font-size: 3rem;
+    color: var(--soft-beige);
+}
+.welcome-container span{
+    font-family: 'Bonheur Royale', sans-serif;
+}
+.description-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--soft-beige);
+}
+.description-container div{
+    width: 95%;
+    margin: 0 auto;
+}
+.description-container h6{
+    padding: 50px 0px 7px 0px;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+.description-container h4{
+    font-size: 2.5rem;
+    width: 88%;
+    letter-spacing: 2px;
+    background: var(--green);
+    color: var(--soft-beige);
+} 
+.description-container h5{
+    font-size: 1.8rem;
+    margin-top: 20px;
+    color: var(--green);
+}
+.description-container p{
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align:justify;
+    margin-top: 20px;
+    color: var(--green);    
+}
+.img-container{
+    width: 100%;
+    height: auto;
+}
+.img-container img{
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+}

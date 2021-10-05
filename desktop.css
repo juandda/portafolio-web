@@ -1,0 +1,155 @@
+:root{
+    --beige: #FAF1E6;
+    --soft-beige:#FDFAF6;
+    --soft-green:#E4EFE7;
+    --green:#064420;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+    font-family: "Quicksand", sans-serif;
+}
+header{
+    height: 100%;
+    background-image: url('https://cdn.pixabay.com/photo/2020/06/29/14/15/lightbulb-5352822_960_720.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+nav{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    min-height: 8vh;
+}
+nav img{
+    width: 180px;
+}
+.nav-links{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    list-style: none;
+    font-size: 15px;
+}
+.nav-links a{
+    text-decoration: none;
+    color: var(--soft-beige);
+    letter-spacing: 3px;
+    font-weight: bolder;
+}
+.welcome-container{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}   
+.welcome-container h1{
+    font-family: 'Exo', sans-serif;
+    font-size: 40px;
+    color: var(--soft-beige);
+}
+.welcome-container h2{
+    font-family: 'Exo', sans-serif;
+    font-size: 60px;
+    color: var(--soft-beige);
+}
+.welcome-container span{
+    font-family: 'Bonheur Royale', sans-serif;
+}
+
+
+
+
+header{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('https://cdn.pixabay.com/photo/2020/06/29/14/15/lightbulb-5352822_960_720.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+nav{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.nav-links{
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+    list-style: none;
+    font-size: 1.3rem;
+    margin-top: 60px;
+    position: fixed;
+}
+.nav-links hr{
+    margin-left: 7px;
+    margin-right: 7px;
+}
+.nav-links a{
+    text-decoration: none;
+    color: var(--soft-beige);
+    font-weight: bolder;
+}
+.welcome-container{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 250px
+}   
+.welcome-container h1{
+    font-family: 'Exo', sans-serif;
+    font-size: 3rem;
+    color: var(--soft-beige);
+}
+.welcome-container h2{
+    font-family: 'Exo', sans-serif;
+    font-size: 3rem;
+    color: var(--soft-beige);
+}
+.welcome-container span{
+    font-family: 'Bonheur Royale', sans-serif;
+}
+.description-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--soft-beige);
+}
+.description-container div{
+    width: 100vw;
+}
+.description-container h6{
+    padding: 20px 0 10px 10px;
+    font-size: 1.5rem;
+    letter-spacing: .3rem;
+    color: var(--green);
+}
+.description-container h4{
+    font-size: 2.5rem;
+    width: 80%;
+    margin-left: 8px;
+    padding-left: 7px;
+    background: var(--green);
+    color: var(--soft-beige);
+} 
+.description-container h5{
+    padding-top: 20px;
+    padding-left: 10px;
+    font-size: 1.8rem;
+    color: var(--green);
+}
+.description-container p{
+    margin: 10px 10px 0px 10px;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align:justify;
+    color: var(--green);    
+}
