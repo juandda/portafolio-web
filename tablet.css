@@ -1,0 +1,16 @@
+.card-info--container{
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+}
+.card-info--container .card-container{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.contact-container .contact-container--info form{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.contact-container .contact-container--info input{
+    width: 40%;
+}

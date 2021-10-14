@@ -1,8 +1,5 @@
 :root{
-    --beige: #FAF1E6;
     --soft-beige:#FDFAF6;
-    --soft-green:#E4EFE7;
-    --green:#064420;
 }
 
 *{
@@ -23,27 +20,54 @@ header{
     background-repeat: no-repeat;
     background-position: center;
 }
-body{
-    background-color: #E6E6E6;
-}
 nav{
     display: flex;
     width: 100%;
-    height: 8vh;
+    height: 50px;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
-    background-color: black;
+    background:#181818;
+}
+.bar-btn{
+    font-size: 2.5rem;
+    margin-right: 20px;
+    color: #fff;
+    cursor: pointer;
 }
 .nav-links{
-    display: flex;
+    position: fixed;
     width: 100%;
-    justify-content: space-around;
-    list-style: none;
+    height: 0vh;
+    top: 50px;
+    background: #181818;
+    text-align: center;
+    transition: all .4s;
 }
-.nav-links a{
+.nav-links li{
+    display: none;
+    line-height: 10px;
+    margin: 45px 0;
+    transition: all .2s;
+}
+.nav-links li a{
+    font-size: 1.6rem;
     text-decoration: none;
-    color: var(--soft-beige);
+    color: #F6F6F6;
     font-weight: bolder;
+}
+.nav-links li a.active, .nav-links li a:hover {
+    color:#f5ad5b;
+    transition: .3s;
+}
+#check{
+    display: none;
+}
+#check:checked ~ .nav-links{
+    height: 55vh;
+}
+#check:checked ~ .nav-links li{
+    display: block;
 }
 .welcome-container{
     width: 100%;
@@ -54,22 +78,35 @@ nav{
 }
 .welcome-container h1{
     font-family: 'Exo', sans-serif;
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--soft-beige);
     margin-top: 250px;
 }
 .welcome-container h2{
     font-family: 'Exo', sans-serif;
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--soft-beige);
+    text-align: center;
 }
 .welcome-container span{
     font-family: 'Bonheur Royale', sans-serif;
+    text-align: center;
+}
+.welcome-container ul{
+    display: flex;
+    margin-top: 10px;
+}
+.welcome-container li{
+    padding-right: 7px;
+}
+.welcome-container img:hover{
+    background-color: #7F7C82;
+    transition: .5s ease-out;
 }
 .description-container{
     width: 100%;
     height: 100%;
-    background-color: var(--soft-beige);
+    background-color: #F3F1F5;
 }
 .description-container div{
     width: 95%;
@@ -77,28 +114,29 @@ nav{
 }
 .description-container h6{
     padding: 50px 0px 7px 0px;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     letter-spacing: 2px;
-    color: var(--green);
+    color: #212121;
 }
 .description-container h4{
-    font-size: 2.5rem;
+    font-size: 3rem;
     width: 88%;
     letter-spacing: 2px;
-    background: var(--beige);
-    color: var(--green);
+    background: #212121;
+    color: #F3F1F5;
 } 
+
 .description-container h5{
     font-size: 1.8rem;
     margin-top: 20px;
-    color: var(--green);
+    color: #212121;
 }
 .description-container p{
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     line-height: 2rem;
     text-align:justify;
     padding: 20px 0 20px 0;
-    color: var(--green);    
+    color: #212121;    
 }
 .description-container .img-container{
     width: 100%;
@@ -108,12 +146,16 @@ nav{
 }
 .img-container img{
     width:80%;
-    margin-top: 4.4rem;
+    margin-top: 44px;
 }
 .skills-container{
     width: 100%;
     height: 100%;
-    background-color: #F7F7F7;
+}
+.skills-container h2{
+    text-align: center;
+    font-size: 3rem;
+    padding: 20px 0
 }
 .skills-container .card-container{
     width: 80%;
@@ -134,15 +176,133 @@ nav{
     position: relative;
     top: 10px;
     letter-spacing: 2px;
-    font-weight:600;
+    font-weight:200;
 }
 .card-container p{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 2rem;
     text-align:center;
     padding-bottom: 15px;
-    color: var(--green);
+    color: #212121;
 }
-.card-container .css-logo{
-    width: 55%;
+.services-container{
+    width: 100%;
+    height: 100%;
+    background-color: #212121;
+}
+.services-container h2{
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    padding: 20px 0 20px 0;
+    color: #F6F6F6;
+}
+.services-container .services-information--container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.services-container .services-information--container img{
+    width: 20%;
+    margin: 0 auto;
+}
+.services-container .services-information--container h3{
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 20px 0;
+    color: #F6F6F6;
+}
+.services-container .services-information--container p{
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 1.4rem;
+    color:#7F7C82;
+}
+.contact-container{
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.pixabay.com/photo/2019/09/19/20/24/sailing-4490241_960_720.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+.contact-container h2{
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    padding: 20px 0;
+    color: black;
+}
+.contact-container .contact-container--info form{
+    display: flex;
+    flex-direction: column;
+}
+.contact-container .contact-container--info input{
+    width: 90%;
+    height: 50px;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: none;
+    padding-left: 10px;
+    font-family: "Quicksand", sans-serif;
+    color: #F3F1F5  ;
+}
+.contact-container .contact-container--info textarea{
+    width: 90%;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0  0 10px;
+    border: none;
+    font-family: "Quicksand", sans-serif;
+    color: #F3F1F5;
+}
+.button-container button{
+    width: 160px;
+    height: 50px;
+    display: flex;
+    margin: 30px auto;
+    padding: 13px 0 0 26px;
+    font-family: "Quicksand", sans-serif;
+    background-color: #f5ad5b;
+    color: #F3F1F5;
+    border: none;
+    font-weight: bold;
+    font-size: 1.6rem;
+    border: 1px solid #7F7C82;
+    border-radius: 8%;
+    cursor: pointer;
+}
+.button-container button:hover{
+    background-color:#212121;
+    transition:.5s ease-in-out;
+}
+.data-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.data-container h6{
+    margin-left: 15px;
+    color: #d8dbd9;
+    font-size: 1.6rem;
+}
+.data-container hr{
+    margin-left: 10px;
+}
+.data-container p{
+    margin: 3px 0 15px 10px ;
+    font-size: 1.3rem;
+    color: #E4EFE7;
+}
+.footer-container{
+    width: 100%;
+    height: 100px;
+    background-color: #212121;
+}
+.footer-container p{
+    text-align: center;
+    padding-top: 40px;
+    font-size: 1.2rem;
+    color: #7F7C82;
 }

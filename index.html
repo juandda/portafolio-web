@@ -8,22 +8,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Exo:wght@700&family=Quicksand:wght@300;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" media="(min-width: 768px)" href="tablet.css" />
+    <link rel="stylesheet" media="(min-width: 1024px)" href="laptop.css" />
     <title>JDDA</title>
 </head>
 <body> 
     <header>
         <nav>  
+            <div>
+                <img src="" alt="">
+            </div>  
+            <input type="checkbox" id="check">
+            <label for="check" class="bar-btn">
+                <img src="./assets/icons8-menu-24.png" alt="">
+            </label>
             <ul class="nav-links">
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Portfolio</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a class="active"href="" id="home" >Home</a></li>
+                <li><a id="about" href="">About</a></li>
+                <li><a id="services" href="">Skills</a></li>
+                <li><a id="Portfolio" href="">Services</a></li>
+                <li><a id="contact" href="">Contact</a></li>
             </ul>
         </nav> 
         <div class="welcome-container">
             <h1>Hi!</h1>
             <h2>I am <span>Juan Diego Ducon</span></h2>
+            <ul>
+                <li><a href=""><img src="./assets/icons8-instagram-30.png" alt=""></a></li>
+                <li><a href=""><img src="./assets/icons8-facebook-30.png" alt=""></a></li>
+                <li><a href=""><img src="./assets/icons8-twitter-30.png" alt=""></a></li>
+                <li><a href=""><img src="./assets/icons8-linkedin-30.png" alt=""></a></li>
+                <li><a href=""><img src="./assets/icons8-github-30.png" alt=""></a></li>
+            </ul>
         </div>
     </header>
     <section class="description-container">
@@ -34,25 +50,80 @@
             <h6>WHO AM I</h6>
             <h4>Juan Diego Ducon.</h4>
             <h5>Web Developer   </h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi esse veritatis hic, dolorem, quo expedita laudantium ratione odio minus asperiores, dolores alias pariatur earum? Nobis dolorem animi magni aliquid aliquam.</p>
+            <p>Soy un estudiante de ingeniería de sistemas apasionado por la programación. Me gusta aprender día a día nuevas tecnologías y técnicas que me permitan desarrollarme profesionalmente, De igual forma pienso que soy una persona muy paciente en busca de nuevos retos y en constante aprendizaje.</p>
         </div>
     </section>
     <section class="skills-container">
-        <div class="card-container">
-            <h2>HTML</h2>
-            <img src="https://img.icons8.com/color/480/000000/html-5--v1.png"/>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore nam accusantium perferendis illo error sunt?</p>
-        </div>
-        <div class="card-container">
-            <h2>CSS</h2>
-            <img src="https://img.icons8.com/color/480/000000/css3.png"/>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore nam accusantium perferendis illo error sunt?</p>
-        </div>
-        <div class="card-container">
-            <h2>JavaScript</h2>
-            <img src="https://img.icons8.com/color/480/000000/javascript--v1.png"/>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore nam accusantium perferendis illo error sunt?</p>
+        <div class="title-container"><h2>Skills</h2></div>
+        <div class="card-info--container">
+            <div class="card-container">
+                <h2>HTML</h2>
+                <img src="https://img.icons8.com/color/480/000000/html-5--v1.png"/>
+                <p>Es el componente más básico de la web. Es utilizado para definir la estructura del contenido de una página web.</p>
+            </div>
+            <div class="card-container">
+                <h2>CSS</h2>
+                <img src="https://img.icons8.com/color/480/000000/css3.png"/>
+                <p>Es utilizado para estilar las paginas web a partir de la estructura ya hecha, de esta manera se separa la estructura del estilado.</p>
+            </div>
+            <div class="card-container">
+                <h2>JavaScript</h2>
+                <img src="https://img.icons8.com/color/480/000000/javascript--v1.png"/>
+                <p>Es el componente encargado de complementar a la estructura y el estilado, permite implementar funciones complejas. De esta manera se permiten lograr soluciones mas adecuadas a los problemas de la gente.</p>
+            </div>
         </div>
     </section>
+    <section class="services-container">
+        <h2>Services</h2>
+        <div class="services-information--container">
+            <img src="./assets/webDesign.png" alt="computador con un pincel encima">
+            <h3>Web Design</h3>
+            <p>Para que tu empresa o negocio se vea único y de acuerdo a las necesidades y esencia del lugar.</p>
+        </div>
+        <div class="services-information--container">
+            <img src="./assets/web-programming.png" alt="icono de una pagina web">
+            <h3>Development</h3>
+            <p>Puedo implementar tecnologías para darle complejidad al proyecto. De manera que se vea un producto más único.</p>
+        </div>
+        <div class="services-information--container">
+            <img src="./assets/responsive.png" alt="icono de un computador una tablet y un celular">
+            <h3>Fully Responsive</h3>
+            <p>Implementando los últimos estándares de calidad y utilizando mobile first. Tendrás un producto escalable a todos los dispositivos del mercado. Logrando una visita elegante y ordenada de tus usuarios.</p>
+        </div>
+    </section>
+    <section class="contact-container">
+        <h2>Contact</h2>
+        <div class="contact-container--info">
+            <form action="">
+                <input type="text" id="name" placeholder="Name" required = "required">
+                <input type="email" id="email" placeholder="Email" required = "required">
+                <textarea name="Message" id="message" rows="6" placeholder="Message" required = "required"></textarea>
+            </form>
+        </div>
+        <div class="button-container">
+            <button type="submit">Send Message</button>
+        </div>
+        <div class="data-container">
+            <h6>Phone</h6>
+            <hr width="0px" size="23px">
+            <p>+57 318 505 4944</p>
+        </div>
+        <div class="data-container">
+            <h6>Address</h6>
+            <hr size="23px">
+            <p>Bogotá, Colombia</p>
+        </div>
+        <div class="data-container">
+            <h6>Email</h6>
+            <hr size="23px">
+            <p>jduconavila@gmailcom</p>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <p>Copyright © All Rights Reserved</p>
+        </div>
+    </footer>
+    <script src="./main.js"></script>
 </body>
 </html>
