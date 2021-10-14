@@ -23,14 +23,14 @@
                 <img src="./assets/icons8-menu-24.png" alt="">
             </label>
             <ul class="nav-links">
-                <li><a class="active"href="" id="home" >Home</a></li>
-                <li><a id="about" href="">About</a></li>
-                <li><a id="services" href="">Skills</a></li>
-                <li><a id="Portfolio" href="">Services</a></li>
-                <li><a id="contact" href="">Contact</a></li>
+                <li><a class="active"href="#home">Home</a></li>
+                <li><a id="about" href="#about">About</a></li>
+                <li><a id="services" href="#skills">Skills</a></li>
+                <li><a id="Portfolio" href="#services">Services</a></li>
+                <li><a id="contact" href="#contact">Contact</a></li>
             </ul>
         </nav> 
-        <div class="welcome-container">
+        <div class="welcome-container" id="#home">
             <h1>Hi!</h1>
             <h2>I am <span>Juan Diego Ducon</span></h2>
             <ul>
@@ -42,7 +42,7 @@
             </ul>
         </div>
     </header>
-    <section class="description-container">
+    <section class="description-container" id="#about">
         <div class="img-container">
             <img src="https://i.pinimg.com/564x/e0/9c/fa/e09cfae7c4fe70101962526d5c1883ec.jpg" alt="imagen del autor">
         </div>
@@ -53,7 +53,7 @@
             <p>Soy un estudiante de ingeniería de sistemas apasionado por la programación. Me gusta aprender día a día nuevas tecnologías y técnicas que me permitan desarrollarme profesionalmente, De igual forma pienso que soy una persona muy paciente en busca de nuevos retos y en constante aprendizaje.</p>
         </div>
     </section>
-    <section class="skills-container">
+    <section class="skills-container" id="#skills">
         <div class="title-container"><h2>Skills</h2></div>
         <div class="card-info--container">
             <div class="card-container">
@@ -73,7 +73,7 @@
             </div>
         </div>
     </section>
-    <section class="services-container">
+    <section class="services-container" id="#services">
         <h2>Services</h2>
         <div class="services-information--container">
             <img src="./assets/webDesign.png" alt="computador con un pincel encima">
@@ -91,7 +91,7 @@
             <p>Implementando los últimos estándares de calidad y utilizando mobile first. Tendrás un producto escalable a todos los dispositivos del mercado. Logrando una visita elegante y ordenada de tus usuarios.</p>
         </div>
     </section>
-    <section class="contact-container">
+    <section class="contact-container" id="#contact">
         <h2>Contact</h2>
         <div class="contact-container--info">
             <form action="">
